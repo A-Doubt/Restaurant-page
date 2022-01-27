@@ -19,15 +19,16 @@ export const createLandingPage = () => {
     const createRight = (() => {
         const right = document.createElement('div');
         right.classList.add('right'); 
-    
+
         // creating header
-        const header = (() => {
+        const rightHeader = (() => {
             const header = document.createElement('header');
             header.classList.add('header');
             const headerLinks = document.createElement('nav');
             headerLinks.classList.add('header-links');
             // creating header links and appending them
             const headerList = document.createElement('ul')
+            headerList.classList.add('header-list');
             const liHome = document.createElement('li');
             liHome.textContent = 'Home';
             const liMenu = document.createElement('li');
@@ -77,20 +78,20 @@ export const createLandingPage = () => {
         })();
 
         // appending 2 main classes to 'right'
-        right.append(header, main);
+        right.append(rightHeader, main);
         return {
-            header,
-            right,
+            rightHeader,
+            right
         };
     })();
 
     // appending 2 main divisions to 'landingPage' 
     // and 'landingPage' under '#content' which is the only preexisting HTML element inside body.
     const landingPage = document.createElement('div');
-    landingPage.classList.add('visible'); // adding visibility, as it's the first page to load
+    // landingPage.classList.add('invisible'); // adding visibility, as it's the first page to load
 
     landingPage.append(left, createRight.right);
     content.appendChild(landingPage);
 
-    return createRight.header;
+    return landingPage;
 };
