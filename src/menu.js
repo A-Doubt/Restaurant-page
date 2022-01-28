@@ -1,17 +1,12 @@
 console.log('test from menu');
-
 export const createMenuPage = () => {
 
     const nigiriDiv = document.createElement('div');
     nigiriDiv.classList.add('nigiri', 'menu-div');
-
     const hosomakiDiv = document.createElement('div');
     hosomakiDiv.classList.add('hosomaki-div', 'menu-div');
-
     const californiaMakiDiv = document.createElement('div');
     californiaMakiDiv.classList.add('california-maki', 'menu-div');
-    
-    
     
     (function images() {
         const left = document.createElement('div');
@@ -35,12 +30,9 @@ export const createMenuPage = () => {
         nigiriDiv.appendChild(nigiriImage);
         hosomakiDiv.appendChild(hosomakiImage);
         californiaMakiDiv.appendChild(californiaMakiImage);
-
     })();
  
-
     (function cards () {
-
         // card 1 - nigiri
         const nigiriCard = document.createElement('div');
         nigiriCard.classList.add('menu-card');
@@ -79,8 +71,6 @@ export const createMenuPage = () => {
             dlNigiri.append(dt, dd);
         }
         
-
-
         // card 2 - hosomaki
         const hosomakiCard = document.createElement('div');
         hosomakiCard.classList.add('menu-card');
@@ -119,7 +109,7 @@ export const createMenuPage = () => {
             dlHosomaki.append(dt, dd);
         }
         
-        // card 3
+        // card 3 - california maki
         const californiaMakiCard = document.createElement('div');
         californiaMakiCard.classList.add('menu-card');
         californiaMakiCard.setAttribute('id', 'california-maki-card');

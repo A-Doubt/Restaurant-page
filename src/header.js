@@ -33,12 +33,16 @@ export const createHeader = () => {
     const headerList = document.createElement('ul')
     headerList.classList.add('header-list');
     const liHome = document.createElement('li');
+    liHome.setAttribute('id', 'header-home-link');
     liHome.textContent = 'Home';
     const liMenu = document.createElement('li');
+    liMenu.setAttribute('id', 'header-menu-link');
     liMenu.textContent = 'Menu';
     const liAboutUs = document.createElement('li');
+    liAboutUs.setAttribute('id', 'header-about-us-link');
     liAboutUs.textContent = 'About us';
     const liContact = document.createElement('li');
+    liContact.setAttribute('id', 'header-contact-link');
     liContact.textContent = 'Contact';
     headerList.append(liHome, liMenu, liAboutUs, liContact);
     headerLinks.appendChild(headerList);

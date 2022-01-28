@@ -1,4 +1,4 @@
-console.log('test from loading-page');
+console.log('test from landing-page');
 
 export const createLandingPage = () => {
 
@@ -29,12 +29,16 @@ export const createLandingPage = () => {
             const headerList = document.createElement('ul')
             headerList.classList.add('header-list');
             const liHome = document.createElement('li');
+            liHome.setAttribute('id', 'landing-home-link');
             liHome.textContent = 'Home';
             const liMenu = document.createElement('li');
+            liMenu.setAttribute('id', 'landing-menu-link');
             liMenu.textContent = 'Menu';
             const liAboutUs = document.createElement('li');
+            liAboutUs.setAttribute('id', 'landing-about-us-link');
             liAboutUs.textContent = 'About us';
             const liContact = document.createElement('li');
+            liContact.setAttribute('id', 'landing-contact-link');
             liContact.textContent = 'Contact';
             headerList.append(liHome, liMenu, liAboutUs, liContact);
             headerLinks.appendChild(headerList);
@@ -57,14 +61,23 @@ export const createLandingPage = () => {
             const nameLogo = document.createElement('div')
             nameLogo.classList.add('name-logo');
         
+            // creating restaurant name + underline and putting it in a container
             const p = document.createElement('p');
             p.setAttribute('id', 'landing-right-name');
             p.textContent = 'Restaurant name';
+            const underLine = document.createElement('hr');
+            underLine.classList.add('logo-underline');
+            underLine.setAttribute('id', 'logo-underline-address');
+            const nameContainer = document.createElement('div');
+            nameContainer.append(p, underLine);
+
+            // creating restaurant logo
             const sushiLogo = document.createElement('img');
             sushiLogo.setAttribute('id', 'sushi-logo');
             sushiLogo.src = '../photos/187463.png';
-            nameLogo.append(p, sushiLogo);
+            nameLogo.append(nameContainer, sushiLogo);
         
+            // creating right side of main, with short info + button leading to 'About us'
             const landingRightInfo = document.createElement('p');
             landingRightInfo.setAttribute('id', 'landing-right-info');
             landingRightInfo.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nam vero neque doloribus. Illo, culpa ducimus dolores voluptate cum reprehenderit, fugiat repudiandae nulla veritatis a, in exercitationem consectetur asperiores quas.';
@@ -79,15 +92,15 @@ export const createLandingPage = () => {
         // appending 2 main classes to 'right'
         right.append(rightHeader, main);
         return {
-            rightHeader,
-            right
+        right,
+        rightHeader
         };
     })();
 
     // appending 2 main divisions to 'landingPage' 
     // and 'landingPage' under '#content' which is the only preexisting HTML element inside body.
     const landingPage = document.createElement('div');
-    // landingPage.classList.add('invisible'); // adding visibility, as it's the first page to load
+    landingPage.classList.add('landing');
 
     landingPage.append(left, createRight.right);
 

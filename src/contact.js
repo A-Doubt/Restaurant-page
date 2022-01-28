@@ -1,6 +1,5 @@
 console.log ('test from contact3');
 
-
 export const createContactPage = () => {
 
     // creating left side of main
@@ -32,7 +31,7 @@ export const createContactPage = () => {
         // creating restaurant name h2 and underline
         const restaurantName = document.createElement('h2');
         restaurantName.classList.add('restaurant-name');
-        restaurantName.setAttribute('id', 'white');
+        restaurantName.setAttribute('id', 'landing-right-name');
         restaurantName.textContent = 'Restaurant name';
         const underLine = document.createElement('hr');
         underLine.classList.add('logo-underline');
