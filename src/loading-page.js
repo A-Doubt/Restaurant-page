@@ -1,7 +1,6 @@
 console.log('test from loading-page');
 
 export const createLandingPage = () => {
-    const content = document.getElementById('content');
 
     // creating left side of the main page
     const left = (() => {
@@ -91,7 +90,8 @@ export const createLandingPage = () => {
     // landingPage.classList.add('invisible'); // adding visibility, as it's the first page to load
 
     landingPage.append(left, createRight.right);
-    content.appendChild(landingPage);
 
+    const content = document.getElementById('content');
+    content.appendChild(landingPage);
     return landingPage;
 };
