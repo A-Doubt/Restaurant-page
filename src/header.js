@@ -1,4 +1,3 @@
-console.log('from header.js');
 
 export const createHeader = () => {
     // main header and left + right headers
@@ -22,7 +21,7 @@ export const createHeader = () => {
     p.appendChild(underLine);
 
     const sushiLogo = document.createElement('img');
-    sushiLogo.classList.add('sushi-logo-contact');
+    sushiLogo.classList.add('sushi-logo');
     sushiLogo.src = '../photos/187463.png';
     leftHeader.append(sushiLogo, p);
 

@@ -1,4 +1,4 @@
-console.log('test from menu');
+
 export const createMenuPage = () => {
 
     const nigiriDiv = document.createElement('div');

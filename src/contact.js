@@ -1,4 +1,3 @@
-console.log ('test from contact3');
 
 export const createContactPage = () => {
 
@@ -17,7 +16,6 @@ export const createContactPage = () => {
             mapContainer.appendChild(map);
             left.appendChild(mapContainer);
         })();
-
         return left;
     })();
 

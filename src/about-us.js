@@ -1,4 +1,3 @@
-console.log('test from about-us-page');
 
 export const createAboutUsPage = () => {
 
@@ -52,7 +51,7 @@ export const createAboutUsPage = () => {
 
         const aboutUsRightInfo2 = document.createElement('p');
         aboutUsRightInfo2.classList.add('about-us-right-info');
-        aboutUsRightInfo2.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum tempore natus aliquid facere incidunt est quasi error laborum, sit ad, sed debitis quas autem nam pariatur minima doloremque fugit quos! Nobis iste vitae voluptatum harum omnis. Autem, quidem perferendis soluta non repellat, quis labore aliquam doloribus asperiores maiores veritatis. Fuga deleniti, voluptatem aliquam libero laudantium officia ut nihil omnis vitae consequuntur! Aspernatur debitis voluptatibus ipsa quidem culpa perferendis commodi ipsum delectus eveniet possimus.';
+        aboutUsRightInfo2.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum tempore natus aliquid facere incidunt est quasi error laborum, sit ad, sed debitis quas autem nam pariatur minima doloremque fugit quos! Nobis iste vitae voluptatum harum omnis. Aspernatur debitis voluptatibus ipsa quidem culpa perferendis commodi ipsum delectus eveniet possimus.';
         
         aboutUsRight.append(nameLogo, firstHeader, aboutUsRightInfo1, secondHeader, aboutUsRightInfo2)
         return aboutUsRight;

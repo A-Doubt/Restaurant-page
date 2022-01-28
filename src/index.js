@@ -10,49 +10,17 @@ const menuPage = createMenuPage();
 const aboutUsPage = createAboutUsPage();
 const contactPage = createContactPage();
 
-console.log('test from ./src/index.js');
-
-// toggle visibility of all the sites available so far
-header.classList.add('invisible');
+// toggle visibility of all the but landing page
 menuPage.classList.add('invisible');
 aboutUsPage.classList.add('invisible');
 contactPage.classList.add('invisible');
 
-const landingLinks = (() => {
-    // grabing the DOM
-    const body = document.querySelector('body');
-    const landingHomeLink = document.querySelector('#landing-home-link');
-    const landingMenuLink = landingHomeLink.nextSibling;
-    const landingAboutUsLink = landingMenuLink.nextSibling;
-    const landingContactLink = landingAboutUsLink.nextSibling;
-
-    landingMenuLink.addEventListener('click', switchToMenu);
-    function switchToMenu() {
-        landingPage.classList.add('invisible');
-        header.classList.remove('invisible');
-        menuPage.classList.remove('invisible');
-        body.style.overflowY = 'auto';
-    }
-
-    landingAboutUsLink.addEventListener('click', switchToAboutUs);
-    function switchToAboutUs() {
-        landingPage.classList.add('invisible');
-        header.classList.remove('invisible');
-        aboutUsPage.classList.remove('invisible');
-        body.style.overflowY = 'hidden';
-    }
-
-    landingContactLink.addEventListener('click', switchToContact);
-    function switchToContact() {
-        landingPage.classList.add('invisible');
-        header.classList.remove('invisible');
-        contactPage.classList.remove('invisible');
-        body.style.overflowY = 'hidden';
-    }
-})();
-
 const headerLinks = (() => {
     const body = document.querySelector('body');
+    const sushiLogo = document.querySelector('.sushi-logo');
+    sushiLogo.addEventListener('click', switchToLanding);
+    const landingAboutUsButton = document.querySelector('#landing-about-us-button');
+    landingAboutUsButton.addEventListener('click', switchToAboutUs);
     const headerHomeLink = document.querySelector('#header-home-link');
     const headerMenuLink = headerHomeLink.nextSibling;
     const headerAboutUsLink = headerMenuLink.nextSibling;
@@ -61,7 +29,6 @@ const headerLinks = (() => {
     headerHomeLink.addEventListener('click', switchToLanding);
     function switchToLanding() {
         landingPage.classList.remove('invisible');
-        header.classList.add('invisible');
         menuPage.classList.add('invisible');
         aboutUsPage.classList.add('invisible');
         contactPage.classList.add('invisible');
@@ -70,6 +37,7 @@ const headerLinks = (() => {
 
     headerMenuLink.addEventListener('click', switchToMenu);
     function switchToMenu() {
+        landingPage.classList.add('invisible');
         menuPage.classList.remove('invisible');
         aboutUsPage.classList.add('invisible');
         contactPage.classList.add('invisible');
@@ -78,6 +46,7 @@ const headerLinks = (() => {
 
     headerAboutUsLink.addEventListener('click', switchToAboutUs);
     function switchToAboutUs() {
+        landingPage.classList.add('invisible');
         menuPage.classList.add('invisible');
         aboutUsPage.classList.remove('invisible');
         contactPage.classList.add('invisible');
@@ -86,6 +55,7 @@ const headerLinks = (() => {
 
     headerContactLink.addEventListener('click', switchToContact);
     function switchToContact() {
+        landingPage.classList.add('invisible');
         menuPage.classList.add('invisible');
         aboutUsPage.classList.add('invisible');
         contactPage.classList.remove('invisible');

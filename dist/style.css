@@ -1,4 +1,4 @@
-/* order in this file is: Landing page -> Contact -> Menu -> About us, sorry about that */
+/* order in this file is: Landing page -> Menu -> About us -> contact */
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -101,7 +101,7 @@ body {
 }
 .name-logo {
     display: flex;
-    padding-top: 70px;
+    padding-top: 50px;
     justify-content: center;
 }
 #landing-right-name {
@@ -116,9 +116,12 @@ body {
     width: 120px;
     height: 120px;
 }
-.sushi-logo-contact {
+.sushi-logo {
     width: 80px;
     margin-right: 40px;
+}
+.sushi-logo:hover {
+    cursor: pointer;
 }
 #sushi-logo-contact-card {
     margin-top: 24px;
@@ -144,107 +147,13 @@ body {
     font-weight: 500;
 }
 
-/* CONTACT STARTS HERE */
-.contact {
-    display: flex;
-    flex-direction: column;
-}
-.contact-main {
-    display: flex;
-    background-color: rgb(21, 33, 68);
-    height: 90vh;
-}
-.left {
-    width: 50vw;
-}
-.right {
-    width: 50vw;
-}
-
-#map {
-    height: 70vh;
-    min-height: 300px;
-    width: 32vw;
-    min-width: 300px;
-    overflow: hidden;
-    margin: 60px;
-    margin-left: 10vw;
-    box-shadow: -40px 40px 5px rgba(0, 0, 0, 0.5);
-}
-#white {
-    color: white;
-    font-size: 30px;
-    letter-spacing: 1px;
-    font-style: italic;
-    font-weight: normal;
-    letter-spacing: 2px;
-    text-align: center;
-}
-.contact-card {
-    padding: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 100px;
-}
-#address-info {
-    margin-top: 30px;
-    background-color: rgb(151, 111, 78);
-    width: 450px;
-    height: 400px;
-    box-shadow: -40px 40px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 20% 5% 20% 5%;
-}
-#address-word {
-    text-align: center;
-    font-size: 26px;
-    color: white;
-}
-#address-list::before {
-    content: 'FAKE address and contact';
-    font-size: 26px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 20px;
-}
-#address-list {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style: none;
-    font-size: 20px;
-    font-weight: 600;
-}
-#address-list li{
-    margin-top: 6px;
-}
-#address-line-without-logo {
-    margin-left: 40px;
-}
-#address-line-with-logo {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
-#pin-icon, #telephone-icon {
-    margin-right: 10px;
-}
-
-.invisible {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-}
 
 /* MENU FROM HERE */
 .menu-main {
     background-color: rgb(21, 33, 68);
 }
 .menu-div {
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -330,7 +239,105 @@ dt:after {
 }
 .about-us-right-info {
     color: white;
-    margin: 12px 100px 20px 100px;
+    min-width: 450px;
+    margin: 12px 50px 20px 100px;
     font-size: 18px;
     line-height: 1.6;
+}
+
+/* CONTACT STARTS HERE */
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+.contact-main {
+    display: flex;
+    background-color: rgb(21, 33, 68);
+    height: 90vh;
+}
+.left {
+    width: 50vw;
+}
+.right {
+    width: 50vw;
+}
+#map {
+    height: 70vh;
+    min-height: 300px;
+    width: 36vw;
+    min-width: 300px;
+    overflow: hidden;
+    margin: 100px;
+    margin-left: 10vw;
+    box-shadow: -40px 40px 5px rgba(0, 0, 0, 0.5);
+}
+#white {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.contact-card {
+    min-width: 300px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+#address-info {
+    margin-top: 30px;
+    background-color: rgb(151, 111, 78);
+    width: 450px;
+    height: 400px;
+    box-shadow: -40px 40px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20% 5% 20% 5%;
+}
+#address-word {
+    text-align: center;
+    font-size: 26px;
+    color: white;
+}
+#address-list::before {
+    content: 'FAKE address and contact';
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#address-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+#address-list li{
+    margin-top: 6px;
+}
+#address-line-without-logo {
+    margin-left: 40px;
+}
+#address-line-with-logo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+#pin-icon, #telephone-icon {
+    margin-right: 10px;
+}
+
+.invisible {
+    position: absolute;
+    top: 10vh;
+    left: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease-out;
 }

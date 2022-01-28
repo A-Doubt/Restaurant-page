@@ -1,4 +1,3 @@
-console.log('test from landing-page');
 
 export const createLandingPage = () => {
 
@@ -15,38 +14,10 @@ export const createLandingPage = () => {
     })();
 
     // creating right side of the main page
-    const createRight = (() => {
+    const right = (() => {
         const right = document.createElement('div');
         right.classList.add('right'); 
 
-        // creating header
-        const rightHeader = (() => {
-            const header = document.createElement('header');
-            header.classList.add('header');
-            const headerLinks = document.createElement('nav');
-            headerLinks.classList.add('header-links');
-            // creating header links and appending them
-            const headerList = document.createElement('ul')
-            headerList.classList.add('header-list');
-            const liHome = document.createElement('li');
-            liHome.setAttribute('id', 'landing-home-link');
-            liHome.textContent = 'Home';
-            const liMenu = document.createElement('li');
-            liMenu.setAttribute('id', 'landing-menu-link');
-            liMenu.textContent = 'Menu';
-            const liAboutUs = document.createElement('li');
-            liAboutUs.setAttribute('id', 'landing-about-us-link');
-            liAboutUs.textContent = 'About us';
-            const liContact = document.createElement('li');
-            liContact.setAttribute('id', 'landing-contact-link');
-            liContact.textContent = 'Contact';
-            headerList.append(liHome, liMenu, liAboutUs, liContact);
-            headerLinks.appendChild(headerList);
-            header.appendChild(headerLinks);
-            return header;
-        })();
-    
-    
         // creating main
         const main = (() => {
             const main = document.createElement('main');
@@ -90,11 +61,8 @@ export const createLandingPage = () => {
         })();
 
         // appending 2 main classes to 'right'
-        right.append(rightHeader, main);
-        return {
-        right,
-        rightHeader
-        };
+        right.append(main);
+        return right;
     })();
 
     // appending 2 main divisions to 'landingPage' 
@@ -102,7 +70,7 @@ export const createLandingPage = () => {
     const landingPage = document.createElement('div');
     landingPage.classList.add('landing');
 
-    landingPage.append(left, createRight.right);
+    landingPage.append(left, right);
 
     const content = document.getElementById('content');
     content.appendChild(landingPage);
