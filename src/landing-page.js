@@ -1,4 +1,5 @@
-
+import chefPicture from './photos/chef_cut_wider.jpg';
+import sushiLogoPicture from './photos/187463.png'
 export const createLandingPage = () => {
 
     // creating left side of the main page
@@ -6,7 +7,7 @@ export const createLandingPage = () => {
         const container = document.createElement('div');
         container.classList.add('container');
         const landingPagePhoto = document.createElement('img');
-        landingPagePhoto.src = '../photos/chef_cut_wider.jpg';
+        landingPagePhoto.src = chefPicture;
         landingPagePhoto.setAttribute('id', 'landing-page-photo');
         container.appendChild(landingPagePhoto);
 
@@ -45,7 +46,7 @@ export const createLandingPage = () => {
             // creating restaurant logo
             const sushiLogo = document.createElement('img');
             sushiLogo.setAttribute('id', 'sushi-logo');
-            sushiLogo.src = '../photos/187463.png';
+            sushiLogo.src = sushiLogoPicture;
             nameLogo.append(nameContainer, sushiLogo);
         
             // creating right side of main, with short info + button leading to 'About us'

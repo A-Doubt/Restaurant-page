@@ -3,6 +3,7 @@ import { createHeader } from './header';
 import { createMenuPage } from './menu';
 import { createAboutUsPage } from './about-us';
 import { createContactPage } from './contact';
+import './style.css';
 
 const header = createHeader();
 const landingPage = createLandingPage();

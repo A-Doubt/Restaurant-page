@@ -1,4 +1,4 @@
-
+import sushiLogoPicture from './photos/187463.png'
 export const createHeader = () => {
     // main header and left + right headers
     const content = document.getElementById('content');
@@ -22,7 +22,7 @@ export const createHeader = () => {
 
     const sushiLogo = document.createElement('img');
     sushiLogo.classList.add('sushi-logo');
-    sushiLogo.src = '../photos/187463.png';
+    sushiLogo.src = sushiLogoPicture;
     leftHeader.append(sushiLogo, p);
 
 

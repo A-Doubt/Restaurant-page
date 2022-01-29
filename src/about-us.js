@@ -1,3 +1,5 @@
+import AboutUsPagePhotoPicture from './photos/about-us-photo2.jpg';
+import sushiLogoPicture from './photos/187463.png';
 
 export const createAboutUsPage = () => {
 
@@ -7,7 +9,7 @@ export const createAboutUsPage = () => {
         left.classList.add('left');
 
         const AboutUsPagePhoto = document.createElement('img');
-        AboutUsPagePhoto.src = '../photos/about-us-photo2.jpg';
+        AboutUsPagePhoto.src = AboutUsPagePhotoPicture;
         AboutUsPagePhoto.setAttribute('id', 'about-us-page-photo');
         left.appendChild(AboutUsPagePhoto);
         return left;
@@ -33,7 +35,7 @@ export const createAboutUsPage = () => {
         // creating restaurant logo
         const sushiLogo = document.createElement('img');
         sushiLogo.setAttribute('id', 'sushi-logo');
-        sushiLogo.src = '../photos/187463.png';
+        sushiLogo.src = sushiLogoPicture;
         nameLogo.append(nameContainer, sushiLogo);
 
         // creating right side of main, with short info + button leading to 'About us'

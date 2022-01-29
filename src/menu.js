@@ -1,4 +1,6 @@
-
+import nigiriPicture from './photos/nigiri-small.jpg';
+import hosomakiPicture from './photos/hosomaki-small.jpg';
+import californiaMakiPicture from './photos/california-maki-small.jpg'
 export const createMenuPage = () => {
 
     const nigiriDiv = document.createElement('div');
@@ -15,17 +17,17 @@ export const createMenuPage = () => {
         const nigiriImage = document.createElement('img');
         nigiriImage.classList.add('menu-image');
         nigiriImage.setAttribute('id', 'nigiri-image');
-        nigiriImage.src = '../photos/nigiri-small.jpg';
+        nigiriImage.src = nigiriPicture;
 
         const hosomakiImage = document.createElement('img');
         hosomakiImage.classList.add('menu-image');
         hosomakiImage.setAttribute('id', 'hosomaki-image');
-        hosomakiImage.src = '../photos/hosomaki-small.jpg';
+        hosomakiImage.src = hosomakiPicture;
 
         const californiaMakiImage = document.createElement('img');
         californiaMakiImage.classList.add('menu-image');
         californiaMakiImage.setAttribute('id', 'california-maki-image');
-        californiaMakiImage.src = '../photos/california-maki-small.jpg';
+        californiaMakiImage.src = californiaMakiPicture;
 
         nigiriDiv.appendChild(nigiriImage);
         hosomakiDiv.appendChild(hosomakiImage);

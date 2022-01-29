@@ -1,4 +1,6 @@
-
+import sushiLogoPicture from './photos/187463.png';
+import pinIconPicture from './photos/pin-icon.png';
+import telepohneIconPicture from './photos/telephone-icon.png';
 export const createContactPage = () => {
 
     // creating left side of main
@@ -50,10 +52,10 @@ export const createContactPage = () => {
             // icons within the list
         const pinIcon = document.createElement('img');
         pinIcon.setAttribute('id', 'pin-icon');
-        pinIcon.src = '../photos/pin-icon.png';
+        pinIcon.src = pinIconPicture;
         const telephoneIcon = document.createElement('img');
         telephoneIcon.setAttribute('id', 'telephone-icon');
-        telephoneIcon.src = '../photos/telephone-icon.png';
+        telephoneIcon.src = telepohneIconPicture;
 
         // populating address and contact info
         addressLine2.textContent = '80-358, Gdańsk';
@@ -72,7 +74,7 @@ export const createContactPage = () => {
         const sushiLogo = document.createElement('img');
         sushiLogo.classList.add('sushi-logo-contact');
         sushiLogo.setAttribute('id', 'sushi-logo-contact-card');
-        sushiLogo.src = '../photos/187463.png';
+        sushiLogo.src = sushiLogoPicture;
 
         addressList.append(addressLine1, addressLine2, addressLine3, addressLine4, sushiLogo);
         addressInfo.appendChild(addressList);
